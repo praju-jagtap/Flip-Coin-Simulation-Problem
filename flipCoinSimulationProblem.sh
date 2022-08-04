@@ -16,8 +16,24 @@ elif [[ ${Result} -eq 1 ]]
 then
     echo "TAILS"
 fi
+echo ""
 
-
+#UC2
+headcount=0
+tailcount=0
+while(( $headcount != 21 && $tailcount != 21 ))
+do
+coin=$(( $RANDOM%2 ))
+if [[ $coin == 1 ]]
+then
+echo -n "Head"
+((headcount++))
+else
+echo -n "Tail"
+((tailcount++))
+fi
+done
+echo ""
 
 
 
