@@ -7,6 +7,7 @@ echo "Welcome to Flip-Coin Simulation Problem"
 echo ""
 
 #UC1
+
 Result=$((RANDOM%2))
 
 if [[ ${Result} -eq 0 ]];
@@ -19,6 +20,7 @@ fi
 echo ""
 
 #UC2
+
 headcount=0
 tailcount=0
 while(( $headcount != 21 && $tailcount != 21 ))
@@ -35,6 +37,19 @@ fi
 done
 echo ""
 
+#UC3
 
+echo ""
+echo "Total number of heads = " $headcount
+echo "Total number of tails = " $tailcount
+if [[ $headcount > $tailcount ]]
+then
+echo "Head Won"
+elif [[ $headcount = $tailcount ]]
+then
+echo "Tie"
+else
+echo "Tail Won"
+fi
 
 
